@@ -5,9 +5,6 @@
     }
   },
   "routes": [
-    { "src": "/", "dest": "/api/index.php" },
-    { "src": "/index.php", "dest": "/api/index.php" },
-    { "src": "/welcome.php", "dest": "/api/welcome.php" },
     { "src": "/(.*)", "dest": "/api/$1" }
   ]
 }
