@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check if  password are correct
     if ($password === "1234") {
         $_SESSION["Username"] = $username;
-        header("Location: /welcome.php");
+        header("Location: /api/welcome.php");
         exit();
     } else {
         $error = "oops! Incorrect password.";
@@ -34,6 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="password" id="password" name="password" required><br><br>
         <button type="submit">Login</button>
     </form>
+    <a href="/api/welcome.php">Go to Welcome Page</a>
     <?php if ($error): ?>
         <p style="color: red;"><?php echo $error; ?></p>
     <?php endif; ?>

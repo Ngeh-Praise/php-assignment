@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION["Username"])) {
-    header("Location: /index.php");
+    header("Location: /api/index.php");
     exit();
 }
 ?>
@@ -17,7 +17,7 @@ if (!isset($_SESSION["Username"])) {
         <h1>Welcome, <?php echo htmlspecialchars($_SESSION["Username"]); ?>!</h1>
         <p>You have successfully logged in.</p>
         <br>
-        <a href="index.php">Logout</a>
+        <a href="/api/index.php">Logout</a>
     </div>
 </body>
 </html>
