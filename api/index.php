@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check if  password are correct
     if ($password === "1234") {
         $_SESSION["Username"] = $username;
-        header("Location: welcome.php");
+        header("Location: /welcome.php");
         exit();
     } else {
         $error = "oops! Incorrect password.";
